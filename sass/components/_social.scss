@@ -1,0 +1,78 @@
+/* Социальные сети team */
+
+.socials-list {
+  display: flex;
+  justify-content: center;
+}
+
+.social-item {
+  justify-content: center;
+}
+
+.socials-item {
+  width: calc((100% - 30px) / 4);
+}
+
+.socials-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+  background: #ffffff;
+  background-position: center;
+  border-radius: 50%;
+  border: none;
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  background: #2196f3;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.socials-icon {
+  fill: #afb1b8;
+}
+
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  fill: $primary-white-color;
+}
+
+/* Социальные футер */
+
+.socials-list-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.socials-link-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+  background-position: center;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.socials-link-footer:hover,
+.socials-link-footer:focus {
+  background: #2196f3;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.socials-icon-footer {
+  fill: $primary-white-color;
+}
+
+.socials-item-footer:not(:last-child) {
+  margin-right: 10px;
+}

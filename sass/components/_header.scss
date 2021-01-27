@@ -1,24 +1,10 @@
 .header {
   border-bottom: 1px solid #ececec;
-}
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.header-logo {
-  margin: 25px 93px 25px 0px;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  color: var(--primary-text-color);
-  font-family: "Raleway", sans-serif;
-}
-
-.web {
-  color: var(--accent-color);
+  &-container {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .nav-container {
@@ -26,52 +12,49 @@
   align-items: center;
 }
 
-.nav-list.menu {
-  margin-right: 305px;
-}
-
 .nav-list {
   display: flex;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  @include fonts(500, 14px, 1.14, 0.02em);
   list-style: none;
   text-decoration: none;
+
+  &.menu {
+    margin-right: 305px;
+  }
+
+  & .link:hover,
+  & .link:focus {
+    color: $accent-color;
+    @include transition;
+  }
+
+  & .link-mail:hover,
+  & .link-mail:focus {
+    color: $accent-color;
+    @include transition;
+  }
+
+  & .link-phone:hover,
+  & .link-phone:focus {
+    color: $accent-color;
+    @include transition;
+  }
+
+  & .link.current {
+    color: $accent-color;
+  }
 }
 
 .nav-item {
   position: relative;
-}
 
-.nav-item:not(:last-child) {
-  margin-right: 50px;
-}
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
 
-.nav-item .link {
-  color: var(--primary-text-color);
-}
-
-.nav-list .link:hover,
-.nav-list .link:focus {
-  color: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav-list .link-mail:hover,
-.nav-list .link-mail:focus {
-  color: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav-list .link-phone:hover,
-.nav-list .link-phone:focus {
-  color: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav-list .link.current {
-  color: var(--accent-color);
+  & .link {
+    color: $primary-text-color;
+  }
 }
 
 .link-mail,
@@ -86,24 +69,24 @@
 
 .icon-mail {
   margin-right: 10px;
-  fill: var(--secondary-text-color);
+  fill: $secondary-text-color;
 }
 
 .icon-phone {
   margin-right: 10px;
-  fill: var(--secondary-text-color);
+  fill: $secondary-text-color;
 }
 
 .link-mail:hover .icon-mail,
 .link-mail:focus .icon-mail {
-  fill: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: $accent-color;
+  @include transition;
 }
 
 .link-phone:hover .icon-phone,
 .link-phone:focus .icon-phone {
-  fill: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: $accent-color;
+  @include transition;
 }
 
 .line::after {
