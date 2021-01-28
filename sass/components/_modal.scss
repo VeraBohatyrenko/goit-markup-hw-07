@@ -53,14 +53,11 @@
 }
 
 .modal-text {
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--primary-text-color);
-
   margin-bottom: 12px;
+
+  text-align: center;
+  color: $primary-text-color;
+  @include fonts(700, 20px, 1.15, 0.03em);
 }
 
 .form-field {
@@ -93,14 +90,14 @@
 }
 
 .close-modal:hover {
-  fill: var(--accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: $accent-color;
+  @include transition;
 }
 
 .form-input:focus {
-  border-color: var(--accent-color);
+  border-color: $accent-color;
   outline: none;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(border-color);
 }
 
 .icon-modal {
@@ -109,8 +106,8 @@
   display: flex;
   left: 12px;
   transform: translateY(-50%);
-  fill: var(--primary-text-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: $primary-text-color;
+  @include transition;
 }
 
 .form-field .form-input,
@@ -118,7 +115,7 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(all);
   outline: transparent;
   cursor: pointer;
 }
@@ -147,22 +144,22 @@
 
 .comment:hover,
 .comment:focus {
-  border-color: var(--accent-color);
+  border-color: $accent-color;
   outline: transparent;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(border-color);
 }
 
 .form-input:hover + .icon-modal,
 .form-input:focus + .icon-modal {
-  fill: var(--accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: $accent-color;
+  @include transition;
 }
 
 .form-input:hover,
 .form-input:focus {
-  border-color: var(--accent-color);
+  border-color: $accent-color;
   outline: transparent;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(border-color);
 }
 
 .button-modal {
@@ -175,18 +172,16 @@
   margin-left: auto;
   margin-right: auto;
 
-  font-family: var(--primary-text-color);
+  font-family: $primary-text-color;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
   width: 200px;
   height: 50px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
+
+  @include fonts(700, 16px, 1.88, 0.06em);
 
   background: #2196f3;
-  border: 1px solid var(--accent-color);
+  border: 1px solid $accent-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
@@ -229,16 +224,16 @@
 }
 
 .checkbox:checked + .icon-checkbox {
-  background-color: var(--accent-color);
+  background-color: $accent-color;
   background-image: url(../images/icons/icons-modal/vector-1.svg);
   background-size: contain;
   background-origin: border-box;
-  border-color: var(--accent-color);
+  border-color: $accent-color;
 }
 
 .agreement-link {
   margin-left: 3px;
-  color: var(--accent-color);
+  color: accent-color;
   text-decoration: underline;
   font-weight: normal;
 }

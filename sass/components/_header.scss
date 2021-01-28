@@ -25,19 +25,19 @@
   & .link:hover,
   & .link:focus {
     color: $accent-color;
-    @include transition;
+    @include transition(color);
   }
 
   & .link-mail:hover,
   & .link-mail:focus {
     color: $accent-color;
-    @include transition;
+    @include transition(color);
   }
 
   & .link-phone:hover,
   & .link-phone:focus {
     color: $accent-color;
-    @include transition;
+    @include transition(color);
   }
 
   & .link.current {

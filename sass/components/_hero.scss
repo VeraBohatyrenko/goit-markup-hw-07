@@ -4,32 +4,31 @@
   background: #c4c4c4;
   text-align: center;
   padding: 200px 0;
-}
 
-.hero-overlay {
-  background-position: center;
+  &-overlay {
+    background-position: center;
 
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-  height: 600px;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/studio/hero/Img.jpg);
-}
+    height: 600px;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/studio/hero/Img.jpg);
+  }
 
-.hero-title {
-  margin-bottom: 30px;
-  color: $primary-white-color;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  &-title {
+    margin-bottom: 30px;
+    color: $primary-white-color;
+
+    @include fonts(900, 44px, 1.36, 0.06em);
+
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
