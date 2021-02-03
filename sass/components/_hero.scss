@@ -2,16 +2,16 @@
 
 .hero {
   background: #c4c4c4;
-  text-align: center;
-  padding: 200px 0;
+  // text-align: center;
+  // padding: 200px 0;
 
   &-overlay {
-    background-position: center;
+    // background-position: center;
 
-    background-repeat: no-repeat;
-    background-size: cover;
+    // background-repeat: no-repeat;
+    // background-size: cover;
 
-    height: 600px;
+    // height: 600px;
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
@@ -23,7 +23,7 @@
   }
 
   &-title {
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     color: $primary-white-color;
 
     @include fonts(900, 44px, 1.36, 0.06em);
